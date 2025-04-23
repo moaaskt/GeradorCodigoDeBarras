@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador de Código de Barras</title>
+    <script src="https://cdn.jsdelivr.net/npm/jsbarcode@3.11.5/dist/JsBarcode.all.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+<body>
+   <!-- Navbar -->
+   <nav class="navbar">
+    <a href="#" class="navbar-brand">
+        <i class="fas fa-barcode"></i> Home
+    </a>
+    <div class="navbar-links">
+       
+        </a>
+    </div>
+</nav>
+
+<!-- Conteúdo Principal -->
+<div class="main-container">
+    <div class="container">
+        <div class="header">
+            <i class="fas fa-barcode icon"></i>
+            <h1>Gerador de Código de Barras</h1>
+            <p>Gere códigos de barras personalizados em segundos</p>
+        </div>
+        
+        <div class="content">
+            <div class="form-group">
+                <label for="barcode-text"><i class="fas fa-pencil-alt"></i> Texto/Número</label>
+                <input type="text" id="barcode-text" class="form-control" placeholder="Digite o conteúdo do código de barras">
+            </div>
+            
+            <div class="form-group">
+                <label for="barcode-type"><i class="fas fa-barcode"></i> Tipo de Código</label>
+                <select id="barcode-type" class="form-control">
+                    <option value="CODE128">CODE 128</option>
+                    <option value="EAN13">EAN-13</option>
+                    <option value="UPC">UPC</option>
+                    <option value="CODE39">CODE 39</option>
+                    <option value="ITF14">ITF-14</option>
+                    <option value="MSI">MSI</option>
+                    <option value="pharmacode">Pharmacode</option>
+                </select>
+            </div>
+            
+            <div class="settings">
+                <div class="settings-title" id="settings-toggle">
+                    <h3><i class="fas fa-cog"></i> Configurações Avançadas</h3>
+                    <i class="fas fa-chevron-down toggle-settings"></i>
+                </div>
+                <div class="settings-content hidden" id="settings-content">
+                    <div class="form-group">
+                        <label for="barcode-width"><i class="fas fa-arrows-alt-h"></i> Largura da barra</label>
+                        <input type="number" id="barcode-width" class="form-control" value="2" min="1" max="10">
+                    </div>
+                    <div class="form-group">
+                        <label for="barcode-height"><i class="fas fa-arrows-alt-v"></i> Altura</label>
+                        <input type="number" id="barcode-height" class="form-control" value="100" min="20" max="200">
+                    </div>
+                    <div class="form-group">
+                        <label for="barcode-color"><i class="fas fa-palette"></i> Cor</label>
+                        <input type="color" id="barcode-color" class="form-control" value="#000000">
+                    </div>
+                    <div class="form-group">
+                        <label for="barcode-display-value"><i class="fas fa-font"></i> Mostrar texto</label>
+                        <select id="barcode-display-value" class="form-control">
+                            <option value="true">Sim</option>
+                            <option value="false">Não</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            
+            <button id="generate-btn" class="btn btn-block">
+                <span id="generate-text">Gerar Código de Barras</span>
+                <span id="generate-loading" class="hidden"><span class="loading"></span> Gerando...</span>
+            </button>
+            
+            <div id="result-container" class="result-container">
+                <p id="placeholder-text"><i class="fas fa-barcode"></i> Seu código de barras aparecerá aqui</p>
+                <svg id="barcode" class="hidden"></svg>
+                
+                <div id="actions" class="actions hidden">
+                    <button id="download-png" class="btn">
+                        <i class="fas fa-download"></i> PNG
+                    </button>
+                    <button id="download-svg" class="btn btn-secondary">
+                        <i class="fas fa-download"></i> SVG
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Rodapé -->
+<footer class="footer">
+    <div class="footer-container">
+        <div class="footer-section">
+            <h3>Sobre Nós</h3>
+            <p>Uma ferramenta gratuita para geração de códigos de barras online, desenvolvida para facilitar seu trabalho.</p>
+       
+        </div>
+        
+    
+        
+        <div class="footer-section">
+            <h3>Tipos de Códigos</h3>
+            <a href="#"><i class="fas fa-barcode"></i> CODE 128</a>
+            <a href="#"><i class="fas fa-barcode"></i> EAN-13</a>
+            <a href="#"><i class="fas fa-barcode"></i> UPC</a>
+            <a href="#"><i class="fas fa-barcode"></i> CODE 39</a>
+        </div>
+        
+        <div class="footer-section">
+            <h3>Contato</h3>
+            <p><i class="fas fa-map-marker-alt"></i> Palhoça, Brasil</p>
+            <p><i class="fas fa-envelope"></i> moacirneto59@gmail.com</p>
+           
+        </div>
+    </div>
+    
+    <div class="footer-bottom">
+        <p>&copy; 2025 Feito por Moacir Neto. Todos os direitos reservados.</p>
+    </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
