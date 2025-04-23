@@ -37,6 +37,7 @@
 
 ## 🌐 Demonstração Online
 
+https://moaaskt.github.io/GeradorCodigoDeBarras/
 
 ## 📝 Licença
 Este projeto está licenciado sob a licença MIT - veja o arquivo LICENSE para detalhes.
