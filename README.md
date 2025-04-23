@@ -1,7 +1,7 @@
 # 🏷️ Gerador de Código de Barras 
 
 ![Preview](https://github.com/moaaskt/GeradorCodigoDeBarras/blob/main/telaCap.jpg)  
-*Um gerador de códigos de barras elegante e funcional com design moderno*
+
 
 ## ✨ Recursos
 
