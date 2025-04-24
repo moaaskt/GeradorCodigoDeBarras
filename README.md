@@ -46,10 +46,5 @@ Este projeto está licenciado sob a licença MIT - veja o arquivo LICENSE para d
 
 Nenhuma instalação necessária! Basta abrir o arquivo `index.html` no navegador.
 
-Para desenvolvimento:
-
-```bash
-git clone https://github.com/seu-usuario/gerador-codigo-barras.git
-cd gerador-codigo-barras
 
 
